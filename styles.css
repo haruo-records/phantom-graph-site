@@ -186,9 +186,17 @@ section {
 }
 
 .relation-card {
+  display: block;
   padding: 1.75rem;
   background: var(--color-surface);
   border: 1px solid var(--color-rule);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease;
+}
+
+.relation-card:hover {
+  border-color: var(--color-accent);
 }
 
 .relation-card__title {
@@ -197,17 +205,6 @@ section {
   font-weight: normal;
   color: var(--color-accent);
   margin-bottom: 0.75rem;
-}
-
-.relation-card__title a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.relation-card__title a:hover {
-  color: var(--color-link-hover);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .relation-card p {
@@ -221,25 +218,12 @@ section {
 footer {
   border-top: 1px solid var(--color-rule);
   padding: 2.25rem 0;
-  margin-top: 0;
 }
 
-.footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+.footer-copy {
   font-size: 0.78rem;
   color: var(--color-muted);
-}
-
-.footer-brand {
-  font-family: var(--font-ui);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-accent);
+  margin-bottom: 0;
 }
 
 /* --- Specimen --- */
@@ -291,11 +275,5 @@ footer {
   .relation-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.35rem;
   }
 }
