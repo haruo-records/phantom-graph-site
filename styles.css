@@ -242,6 +242,34 @@ footer {
   color: var(--color-accent);
 }
 
+/* --- Specimen --- */
+.specimen {
+  padding: 4rem 0 5rem;
+  border-top: none;
+}
+
+.specimen__figure {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.specimen__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.specimen__caption {
+  margin-top: 1.25rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  letter-spacing: 0.01em;
+}
+
 /* --- Responsive --- */
 @media (max-width: 600px) {
   :root {
