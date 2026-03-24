@@ -186,17 +186,9 @@ section {
 }
 
 .relation-card {
-  display: block;
   padding: 1.75rem;
   background: var(--color-surface);
   border: 1px solid var(--color-rule);
-  text-decoration: none;
-  color: inherit;
-  transition: border-color 0.15s ease;
-}
-
-.relation-card:hover {
-  border-color: var(--color-accent);
 }
 
 .relation-card__title {
@@ -205,6 +197,17 @@ section {
   font-weight: normal;
   color: var(--color-accent);
   margin-bottom: 0.75rem;
+}
+
+.relation-card a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.relation-card a:hover {
+  opacity: 0.7;
 }
 
 .relation-card p {
