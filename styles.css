@@ -280,3 +280,39 @@ footer {
     gap: 1.25rem;
   }
 }
+
+/* --- Footer nav (HARUO project links) --- */
+.footer-nav {
+  margin-bottom: 1.75rem;
+}
+
+.footer-nav__label {
+  font-size: 0.68rem;
+  color: #bbb;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.55rem;
+}
+
+.footer-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.25rem;
+}
+
+.footer-nav__links a {
+  font-size: 0.78rem;
+  color: #999;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-nav__links a:hover {
+  color: var(--color-accent);
+}
+
+.footer-nav__current {
+  font-size: 0.78rem;
+  color: #ccc;
+  cursor: default;
+}
