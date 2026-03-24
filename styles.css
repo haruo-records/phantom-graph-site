@@ -1,0 +1,249 @@
+/* ============================================
+   Phantom Graph — styles.css
+   Minimal, legible, calm.
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg:        #f7f7f6;
+  --color-surface:   #ffffff;
+  --color-text:      #1c2333;
+  --color-muted:     #5a6272;
+  --color-accent:    #2b3a5c;
+  --color-rule:      #d6d8dc;
+  --color-link:      #2b3a5c;
+  --color-link-hover:#4a6099;
+
+  --font-display: 'Georgia', 'Times New Roman', serif;
+  --font-body:    'Helvetica Neue', 'Arial', sans-serif;
+
+  --max-width: 720px;
+  --section-gap: 6rem;
+  --line-height: 1.75;
+}
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: var(--line-height);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Layout --- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: normal;
+  color: var(--color-accent);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: 0.6rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--color-text);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+/* --- Sections --- */
+section {
+  padding: var(--section-gap) 0;
+  border-top: 1px solid var(--color-rule);
+}
+
+section:first-of-type {
+  border-top: none;
+}
+
+/* --- Hero --- */
+.hero {
+  padding: 7rem 0 5rem;
+  border-top: none;
+}
+
+.hero__label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 1.75rem;
+}
+
+.hero__title {
+  margin-bottom: 1rem;
+}
+
+.hero__sub {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--color-muted);
+  margin-bottom: 2.5rem;
+}
+
+.hero__intro {
+  font-size: 1.05rem;
+  max-width: 620px;
+}
+
+/* --- What it is not — list --- */
+.definition-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.definition-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-rule);
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.definition-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-muted);
+}
+
+/* --- Relation --- */
+.relation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.relation-card {
+  padding: 1.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+}
+
+.relation-card__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: var(--color-accent);
+  margin-bottom: 0.6rem;
+}
+
+.relation-card__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.relation-card__title a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.relation-card p {
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  margin-bottom: 0;
+}
+
+/* --- Footer --- */
+footer {
+  border-top: 1px solid var(--color-rule);
+  padding: 2.5rem 0;
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.footer-brand {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  :root {
+    --section-gap: 4rem;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    padding: 4.5rem 0 3.5rem;
+  }
+
+  .relation-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+}
