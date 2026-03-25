@@ -261,6 +261,14 @@ a.external:hover::after {
   color: #2b3a5c;
 }
 
+.footer-shortdef {
+  font-size: 0.78rem;
+  color: #bbb;
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
 .footer-copy {
   font-size: 0.72rem;
   color: #aaa;
