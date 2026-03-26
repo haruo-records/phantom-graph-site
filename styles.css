@@ -299,6 +299,61 @@ a.external:hover::after {
   letter-spacing: 0.02em;
 }
 
+/* --- Field Nav (position indicator) --- */
+.field-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 0 1.25rem;
+}
+
+.field-nav__node {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: #1c2333;
+  text-decoration: none;
+  opacity: 0.28;
+  padding: 0.25rem 1.5rem;
+  position: relative;
+  transition: opacity 0.2s;
+}
+
+.field-nav__node + .field-nav__node::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 12px;
+  background: #d6d8dc;
+  transform: translateY(-50%);
+}
+
+.field-nav__node:hover {
+  opacity: 0.75;
+}
+
+.field-nav__node.current {
+  opacity: 1;
+  color: #2b3a5c;
+  cursor: default;
+}
+
+/* --- Field Pair (experiential placement) --- */
+.field-pair {
+  padding: 2rem 0 0.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 5rem;
+}
+
+.field-pair span {
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  color: #aaa;
+  font-style: italic;
+}
+
 /* --- Responsive --- */
 @media (max-width: 600px) {
   h1 {
